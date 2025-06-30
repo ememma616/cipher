@@ -24,10 +24,11 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.menu-inner {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* 左寄せ */
+.menu-label {
+  margin-left: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  color: #262724;
 }
 
 .menu-home {
