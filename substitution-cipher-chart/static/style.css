@@ -24,6 +24,22 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
+.menu-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Homeリンク用のスタイル */
+.menu-home {
+  font-family: inherit;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  margin-left: auto;
+}
+
 .menu-toggle {
   background: none;
   border: none;
@@ -170,5 +186,14 @@ tbody tr.hidden {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .menu-home {
+    font-size: 14px;
+    padding: 8px;
+    margin-right: 8px;
   }
 }
