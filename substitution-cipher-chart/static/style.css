@@ -27,18 +27,18 @@ body {
 .menu-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; /* 左寄せ */
 }
 
-/* Homeリンク用のスタイル */
 .menu-home {
+  margin-left: auto; /* これでHomeを右に押し出す */
   font-family: inherit;
   font-size: 16px;
   color: #fff;
   text-decoration: none;
   padding: 10px;
-  margin-left: auto;
 }
+
 
 .menu-toggle {
   background: none;
