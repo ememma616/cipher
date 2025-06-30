@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'mameron';
+  src: url('Mamelon-4-Hi-Regular.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  font-family: 'mameron', sans-serif;
+  background-color: #f8f8f5;
+  color: #262724;
+  overflow-x: hidden;
+}
+
+/* スプラッシュ画面 */
+.splash-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #f8f8f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease;
+}
+
+.splash-logo {
+  text-align: center;
+}
+
+.splash-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.splash-underline {
+  height: 5px;
+  background-color: #222;
+  width: 0;
+  margin: 0.4em auto 0;
+  animation: underlineExpand 1.2s ease forwards;
+}
+
+@keyframes underlineExpand {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ヘッダー */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5em;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-bottom: 4px solid #222;
+  margin: 0;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1em;
+  margin-left: auto;
+}
+
+.site-nav a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #222;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+  text-align: right;
+}
+
+.site-nav a:hover {
+  border-bottom: 2px solid #222;
+}
+
+/* メイン画像 */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 80vh;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .site-title {
+    font-size: 1.8rem;
+  }
+  .site-nav a {
+    font-size: 1rem;
+  }
+  .splash-text {
+    font-size: 3rem;
+  }
+}
